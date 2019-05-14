@@ -7,9 +7,10 @@
     tools:context=".MainActivity">
 
     <SeekBar
-        android:id="@+id/setTimeSeekBar"
+        android:id="@+id/timerSeekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,12 +18,14 @@
 
     <ImageView
         android:id="@+id/backgroundImageView"
-        android:layout_width="372dp"
-        android:layout_height="456dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerSeekBar"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/egg" />
 
     <Button
@@ -30,12 +33,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="316dp"
-        android:onClick="startStop"
-        android:text="Go!"
+        android:onClick="eggTimerButton"
+        android:text="START!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setTimeSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/timerSeekBar" />
 
     <TextView
         android:id="@+id/timerTextView"
